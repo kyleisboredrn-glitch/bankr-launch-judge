@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "slug": "bankr-launch-judge",
+  "provider": "independent",
+  "providerUrl": "https://bankr.bot/",
+  "logo": null,
+  "demo": {
+    "title": "watch.sh",
+    "language": "bash",
+    "code": "# Scan the latest Bankr launches on Base and Robinhood Chain\nbankr prompt \"Run the bankr-launch-judge watch on the latest 50 launches. Update the case ledger. Facts only.\"\n\n# Judge one token\nbankr prompt \"Judge Bankr token 0xADDRESS on robinhood as rug, vapor, slow cook, or diamond with confidence. Compare to prior cases.\"\n\n# Re-review a serial deployer\nbankr prompt \"Re-open every case from deployer 0xWALLET and report the pattern.\""
+  },
+  "setup": [
+    "Install from GitHub: install the bankr-launch-judge skill from https://github.com/kyleisboredrn-glitch/bankr-launch-judge",
+    "Copy assets/case-ledger.json or start a fresh /cases/bankr-launch-judge/ledger.json on the Bankr filesystem",
+    "Optional: install bankr-token-scam-analysis for deeper holder forensics",
+    "Schedule in Bankr: every 2 hours, prompt in references/automation-prompt.md"
+  ],
+  "install": {
+    "type": "bankr",
+    "repoPath": "bankr-launch-judge",
+    "command": "install the bankr-launch-judge skill from https://github.com/kyleisboredrn-glitch/bankr-launch-judge"
+  }
+}
